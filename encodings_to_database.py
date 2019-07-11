@@ -5,12 +5,12 @@ import glob
 
 all_face_encodings = {}
 
-folder = glob.glob("Database\\*.jpg")
+folder = glob.glob("Database/*.jpg")
 
 for img in folder:
 	image = face_recognition.load_image_file(img)
 	face_locations = face_recognition.face_locations(image)
-	name = (img.split('Database\\')[1])
+	name = (img.split('Database/')[1])
 	name = name.split('.')[0]
 	print(name)
 	all_face_encodings[name] = face_recognition.face_encodings(image, num_jitters=1)[0]

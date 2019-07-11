@@ -32,7 +32,7 @@ def face_verification(test_image):
 	  value = face_recognition.face_distance(face_encodings, unknown_face)
 	  #print(matches,face_names)
 	  
-	  name = "Unknown Person"
+	  name = "Unknown"
 	  minimum = np.amin(value)
 	  #print(minimum)
 
@@ -52,14 +52,14 @@ def face_verification(test_image):
 	del draw
 
 	# Save image
-	pil_image.save('identify.jpg')
+	pil_image.save('Indentified/1.jpg')
 
 	return(pil_image)	 
 
 
 if __name__ == '__main__':
 
-	img = face_recognition.load_image_file("Test\\1.jpg")
+	img = face_recognition.load_image_file("Test/1.jpg")
 	face_verification(img).show()
 
 
