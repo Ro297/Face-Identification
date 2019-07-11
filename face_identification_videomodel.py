@@ -6,7 +6,7 @@ import uuid
 import cv2
 
 def face_detector():
-	with open('C:\\Users\\Rohan\\Desktop\\DhwaniRIS\\Ashoka Face match\\dataset_faces.dat', 'rb') as f:
+	with open('dataset_faces.dat', 'rb') as f:
 		all_face_encodings = pickle.load(f)
 
 	# Grab the list of names and the list of encodings

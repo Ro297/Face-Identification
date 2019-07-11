@@ -7,7 +7,7 @@ import uuid
 
 def face_verification(test_image):
 	# Load face encodings
-	with open('C:\\Users\\Rohan\\Desktop\\DhwaniRIS\\Ashoka Face match\\dataset_faces.dat', 'rb') as f:
+	with open('dataset_faces.dat', 'rb') as f:
 		all_face_encodings = pickle.load(f)
 
 	# Grab the list of names and the list of encodings
@@ -59,7 +59,7 @@ def face_verification(test_image):
 
 if __name__ == '__main__':
 
-	img = face_recognition.load_image_file("C:\\Users\\Rohan\\Desktop\\DhwaniRIS\\Ashoka Face match\\images\\6.jpeg")
+	img = face_recognition.load_image_file("Test\\1.jpg")
 	face_verification(img).show()
 
 
