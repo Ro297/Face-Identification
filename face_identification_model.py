@@ -52,7 +52,7 @@ def face_verification(test_image):
 	del draw
 
 	# Save image
-	pil_image.save('Indentified/1.jpg')
+	pil_image.save('Identified/1.jpg')
 
 	return(pil_image)	 
 
